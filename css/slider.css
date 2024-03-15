@@ -1,0 +1,105 @@
+
+.slider {
+  overflow: hidden;
+  position: relative;
+
+}
+.slider__container {
+  /* display: none; */
+}
+.slider__list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0 -16px;
+}
+.slider__item {
+  padding: 0 16px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  max-width: 25%;
+}
+
+.slider__item_active {
+  max-width: 50%;
+}
+
+.slider__arrow {
+  position: absolute;
+  bottom: 29%;
+  height: 8px;
+  background-color: transparent;
+  width: 64px;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+}
+
+.slider__arrow:hover {
+  opacity: 0.8;
+}
+
+.slider__arrow:active {
+  opacity: 0.6;
+}
+
+.slider__arrow_left {
+  left: 10%;
+  background-position: left;
+  background-image: url("data:image/svg+xml,%3Csvg width='64.000000' height='7.000000' viewBox='0 0 64 7' fill='none' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cdesc%3E Created with Pixso. %3C/desc%3E%3Cdefs/%3E%3Cpath id='Arrow 1' d='M1.2 3.5L3.18 5.47C3.38 5.67 3.38 5.98 3.18 6.18C2.98 6.37 2.67 6.37 2.47 6.18L-0.36 3.35C-0.56 3.15 -0.56 2.84 -0.36 2.64L2.47 -0.19C2.67 -0.38 2.98 -0.38 3.18 -0.19C3.38 0.01 3.38 0.32 3.18 0.52L1.2 2.5L64 2.5L64 3.5L1.2 3.5Z' fill='%23F6F3E3' fill-opacity='1.000000' fill-rule='evenodd'/%3E%3C/svg%3E%0A");
+}
+
+.slider__arrow_right {
+  right: 10%;
+  background-position: right;
+  background-image: url("data:image/svg+xml,%3Csvg width='65.000000' height='7.000000' viewBox='0 0 65 7' fill='none' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cdesc%3E Created with Pixso. %3C/desc%3E%3Cdefs/%3E%3Cpath id='Arrow 2' d='M62.79 3.5L60.81 5.47C60.62 5.67 60.62 5.98 60.81 6.18C61.01 6.37 61.32 6.37 61.52 6.18L64.35 3.35C64.55 3.15 64.55 2.84 64.35 2.64L61.52 -0.19C61.32 -0.38 61.01 -0.38 60.81 -0.19C60.62 0.01 60.62 0.32 60.81 0.52L62.79 2.5L0 2.5L0 3.5L62.79 3.5Z' fill='%23F6F3E3' fill-opacity='1.000000' fill-rule='evenodd'/%3E%3C/svg%3E%0A");
+}
+
+@media (max-width: 1024px) {
+  .slider__item {
+    max-width: 30%;
+  }
+
+  .slider__item_active {
+    max-width: 40%;
+  }
+
+  .slider__arrow {
+    bottom:12%;
+  }
+}
+
+@media (max-width: 768px) {
+  .slider__item {
+    max-width: 25%;
+  }
+
+  .slider__item_active {
+    max-width: 50%;
+  }
+
+  .slider__arrow {
+    width: 40px;
+    bottom: 31%;
+  }
+}
+
+@media (max-width: 560px) {
+  .slider {
+    padding-bottom: 20px;
+  }
+
+  .slider__item {
+    max-width: 100%;
+  }
+
+  .slider__arrow {
+    bottom: 0;
+  }
+  .slider__arrow_left {
+    left: 0;
+  }
+  .slider__arrow_right {
+    right: 0;
+  }
+}
